@@ -185,6 +185,6 @@ class ComputeTabUI(QTabWidget):
         
         # os.popen("g++ -fno-math-errno  main.cpp  linalgebra.cpp testclass.cpp;  ./a.out `cat X.txt`").read()
         if backend_num == 1:
-            os.popen("g++  -fno-math-errno  ../src/main7.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
+            os.popen("g++  -fno-math-errno  ../src/compute_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
         if backend_num == 2:
-            os.popen("g++  -fno-math-errno  ../src/main7.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
+            os.popen("g++  -fno-math-errno  ../src/compute_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()

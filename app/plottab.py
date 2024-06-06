@@ -25,7 +25,7 @@ from pyvistaqt import QtInteractor
 #           use pathlib for cross platform purposes
 #           instead of conda env export, simply use requirements.txt
 
-#FIXIT(SBN): in main7.cpp main8.cpp and main10.cpp low_x and other coordinates must be updated... 
+
 
 
 class   PlotTabUI(QTabWidget):
@@ -700,8 +700,8 @@ class   PlotTabUI(QTabWidget):
                 self.msg_print('Dimension chaned to ' + dim)  
                 file_.write(" " + dim)    
             # this main function just computes skeletals points in p1.txt and p2.txt
-            print('main8.cpp running') 
-            os.popen("g++  -fno-math-errno  ../src/main8.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
+            print('skeleton.cpp running') 
+            os.popen("g++  -fno-math-errno  ../src/skeleton.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
 
 
             self.line_width_sklt1 = self.spin_sklt_line_with.value()
@@ -781,11 +781,11 @@ class   PlotTabUI(QTabWidget):
                 file_.write(" "+str(self.percion_surf_spin.value()))
              
 
-            # os.popen("g++  -fno-math-errno  main10.cpp  linalgebra4.cpp testclass4__.cpp;  ./a.out `cat X.txt`").read()
+            
             if (self.through_generator_cordin_rbtn.isChecked()):
-                os.popen("g++  -fno-math-errno  ../src/main10.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
+                os.popen("g++  -fno-math-errno  ../src/generator_axis_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
             else:# through standad cordinate is checked.
-                os.popen("g++  -fno-math-errno  ../src/main12.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()     
+                os.popen("g++  -fno-math-errno  ../src/std_axis_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()     
 
             import numpy as np
             points = np.loadtxt('../src/demofile.txt')
@@ -841,9 +841,9 @@ class   PlotTabUI(QTabWidget):
 
             # os.popen("g++  -fno-math-errno  main9.cpp  linalgebra4.cpp testclass4__.cpp;  ./a.out `cat X.txt`").read()
             if (self.through_generator_cordin_rbtn.isChecked()):
-                os.popen("g++  -fno-math-errno  ../src/main10.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
+                os.popen("g++  -fno-math-errno  ../src/generator_axis_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()
             else:
-                os.popen("g++  -fno-math-errno  ../src/main12.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()     
+                os.popen("g++  -fno-math-errno  ../src/std_axis_points.cpp  ../include/linalgebra4.cpp ../include/TPMSLattice.cpp -o ../src/a.out;  ../src/a.out `cat ../src/X.txt`").read()     
             
 
 
